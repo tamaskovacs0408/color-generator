@@ -9,6 +9,12 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    try {
+      let colors = new Values(color).all(10);
+    } catch (error) {
+      setError(true)
+      console.log(error)
+    }
   };
 
   return (
@@ -21,6 +27,7 @@ function App() {
             value={color}
             onChange={(event) => setColor(event.target.value)}
             placeholder='Enter your HEX color'
+            className={`${error ? 'error' : null}`}
           />
           <input type="submit" value="Submit" />
         </form>
