@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Values from "values.js";
 import Color from "./Components/Color/Color";
+import uuid from "react-uuid";
 
 function App() {
   const [color, setColor] = useState("");
@@ -35,7 +36,9 @@ function App() {
         </form>
       </div>
       <div className="color__container">
-
+          {colorList.map((color, index) => {
+            return <Color key={uuid()} {...color} index={index}/>
+          })}
       </div>
     </div>
   );
