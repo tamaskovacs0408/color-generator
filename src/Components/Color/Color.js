@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import RgbToHex from '../RgbToHex/RgbToHex';
+import React, { useState, useEffect } from "react";
+import RGBtoHEX from '../RgbToHex/RgbToHex.js';
 
-const Color = ({rgb, pcValue, idx, hexColor}) => {
-  const [alert, setAlert] = useState(false);
-  const rgbStr = rgb.join('');
-  const hex = RgbToHex(...rgb);
+const Color = ({ rgb, weight, index, hexColor }) => {
+  const [copyinfo, setCopyinfo] = useState(false);
+  //const bgColor = rgb.join(","); // the rgb value for the background color
+  const hex = RGBtoHEX(...rgb);
   const hexValue = `#${hexColor}`;
 
-
   return (
-    <div className={`color ${idx} > 10 && 'color-light`}></div>
-  )
-}
+    <div className={`color`} style={{ backgroundColor: `${hexValue}` }}>
+      <p className="percent_value">{weight}%</p>
+      <p className="color_value">{hexValue}</p>
+    </div>
+  );
+};
 
 export default Color;

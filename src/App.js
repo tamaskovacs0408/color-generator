@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import Values from "values.js";
 import Color from "./Components/Color/Color";
 import uuid from "react-uuid";
@@ -7,16 +7,16 @@ import uuid from "react-uuid";
 function App() {
   const [color, setColor] = useState("");
   const [error, setError] = useState(false);
-  const [colorList, setColorList] = useState([]);
+  const [colorList, setColorList] = useState(new Values("#007FB2").all(10));
 
   const handleSubmit = (event) => {
     event.preventDefault();
     try {
-      let colors = new Values(color).all(20);
-      setColorList(colors)
+      let colors = new Values(color).all(10);
+      setColorList(colors);
     } catch (error) {
-      setError(true)
-      console.log(error)
+      setError(true);
+      console.log(error);
     }
   };
 
@@ -29,16 +29,19 @@ function App() {
             type="text"
             value={color}
             onChange={(event) => setColor(event.target.value)}
-            placeholder='Enter your HEX color'
-            className={`${error ? 'error' : null}`}
+            placeholder="Enter your HEX color"
+            className={`${error ? "error" : null}`}
           />
           <input type="submit" value="Submit" />
         </form>
       </div>
       <div className="color__container">
-          {colorList.map((color, index) => {
-            return <Color key={uuid()} {...color} index={index}/>
-          })}
+        {colorList.map((color, index) => {
+          console.log(color)
+          return (
+            <Color key={uuid()} {...color} index={index} hexColor={color.hex} />
+          );
+        })}
       </div>
     </div>
   );
