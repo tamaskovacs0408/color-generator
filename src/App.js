@@ -13,13 +13,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Color Generator</h1>
+      <h1>HEX Color Generator</h1>
       <div className="form__container">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             value={color}
             onChange={(event) => setColor(event.target.value)}
+            placeholder='Enter your HEX color'
           />
           <input type="submit" value="Submit" />
         </form>
