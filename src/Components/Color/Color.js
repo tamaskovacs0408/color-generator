@@ -6,6 +6,12 @@ const Color = ({ rgb, weight, type, hexColor }) => {
   const hex = RGBtoHEX(...rgb).toUpperCase();
   const hexValue = `#${hexColor}`; // Set this to the inline style backgroundColor
 
+  useEffect(() => {
+    setTimeout(() => {
+      setCopyinfo(false)
+    }, 2000)
+  }, [copyinfo])
+
   return (
     <div
       className={`color ${type === "tint" ? "tint" : "shade"} `}
@@ -17,9 +23,10 @@ const Color = ({ rgb, weight, type, hexColor }) => {
     >
       <span className="percent_value">{weight}%</span>
       <span className="color_value">{hex}</span>
-      {copyinfo && <span className="copied"> HEX code copied</span>}
+      {copyinfo && <span className="copied" > HEX code copied</span>}
     </div>
   );
 };
 
 export default Color;
+// 
