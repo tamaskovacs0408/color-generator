@@ -13,13 +13,16 @@
 
 .color {
   width: 25%;
-  height: 150px;
-}
-
-.tint {
-  color: white;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .shade {
+  color: white;
+}
+
+.tint {
   color: black;
 }

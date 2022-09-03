@@ -3,12 +3,11 @@ import RGBtoHEX from '../RgbToHex/RgbToHex.js';
 
 const Color = ({ rgb, weight, index, type, hexColor }) => {
   const [copyinfo, setCopyinfo] = useState(false);
-  //const bgColor = rgb.join(","); // the rgb value for the background color
   const hex = RGBtoHEX(...rgb);
-  const hexValue = `#${hexColor}`;
+  const hexValue = `#${hexColor}`; // Set this to the inline style backgroundColor
 
   return (
-    <div className={`color ${(type === 'tint' ? 'shade' : 'tint')} `} style={{ backgroundColor: `${hexValue}` }}>
+    <div className={`color ${(type === 'tint' ? 'tint' : 'shade')} `} style={{ backgroundColor: `${hexValue}` }}>
       <p className="percent_value">{weight}%</p>
       <p className="color_value">{hex}</p>
     </div>

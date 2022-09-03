@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>HEX Color Generator</h1>
+      <h1>Tint and Shade Generator</h1>
       <div className="form__container">
         <form onSubmit={handleSubmit}>
           <input
@@ -37,7 +37,6 @@ function App() {
       </div>
       <div className="color__container">
         {colorList.map((color, index) => {
-          console.log(color)
           return (
             <Color key={uuid()} {...color} index={index} hexColor={color.hex} />
           );
