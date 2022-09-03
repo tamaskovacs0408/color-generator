@@ -20,13 +20,26 @@ h1 {
   text-shadow: 1px 1px 1px black;
 }
 #input_field {
-  border: none;
   width: 150px;
   height: 25px;
   margin-right: 10px;
   border-radius: 5px;
   padding: 3px;
+  font-size: 1.3rem;
+}
+.btn {
+  border: none;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  color: white;
   font-size: 1.5rem;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color ease-out .3s;
+}
+.btn:hover {
+  background-color: rgb(18, 90, 161);
 }
 
 .error {
@@ -80,6 +93,7 @@ h1 {
 .copied {
   position: absolute;
   bottom: 10%;
+  font-size: 8px;
 }
 
 
