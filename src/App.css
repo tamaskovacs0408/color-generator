@@ -133,6 +133,7 @@ h2 {
   }
   h1 {
     font-size: 3.5rem;
+    letter-spacing: 1px;
   }
   input {
     width: 200px;
@@ -153,5 +154,23 @@ h2 {
   .color .copied {
     font-size: 1.5rem;
     bottom: 10%;
+  }
+}
+@media screen and (min-width: 1200px){
+  h1 {
+    font-size: 4rem;
+  }
+  input {
+    font-size: 2rem;
+    width: 210px;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  .color {
+    width: 19%;
+  }
+  .color span {
+    font-size: 1.8rem;
   }
 }
