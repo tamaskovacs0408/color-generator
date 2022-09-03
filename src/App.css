@@ -39,16 +39,18 @@ input {
   width: 60px;
   height: 30px;
   cursor: pointer;
-  transition: background-color ease-out .3s;
+  transition: background-color ease-out 0.3s;
 }
+
 .btn:hover {
   background-color: rgb(18, 90, 161);
 }
 
 .error {
   border: 2px solid rgb(159, 5, 5);
-  transition: border ease-in-out .3s;
+  transition: border ease-in-out 0.3s;
 }
+
 h2 {
   color: white;
   text-align: center;
@@ -74,11 +76,11 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
 }
-.color span{
+.color span {
   margin: 10px;
   font-size: 1.3rem;
   font-weight: 500;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 .percent_value {
   letter-spacing: 1px;
@@ -90,10 +92,8 @@ h2 {
   align-self: flex-end;
 }
 
-
 .shade {
   color: white;
-  
 }
 
 .tint {
@@ -111,8 +111,7 @@ h2 {
   padding: 2px;
 }
 
-
-@media screen  and (min-width: 768px){
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 3rem;
   }
@@ -124,5 +123,26 @@ h2 {
   }
   .color .copied {
     font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .App-header {
+    height: 200px;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  input {
+    width: 200px;
+    font-size: 1.8rem;
+    padding: 5px;
+  }
+  .btn {
+    width: 90px;
+    height: 40px;
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2.3rem;
   }
 }
