@@ -36,9 +36,9 @@ function App() {
         </form>
       </div>
       <div className="color__container">
-        {colorList.map((color, index) => {
+        {colorList.map((color) => {
           return (
-            <Color key={uuid()} {...color} index={index} hexColor={color.hex} />
+            <Color key={uuid()} {...color} hexColor={color.hex} />
           );
         })}
       </div>
