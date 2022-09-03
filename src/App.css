@@ -15,3 +15,11 @@
   width: 25%;
   height: 150px;
 }
+
+.tint {
+  color: white;
+}
+
+.shade {
+  color: black;
+}
