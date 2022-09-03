@@ -1,3 +1,4 @@
+
 .App {
   width: 100%;
   height: 100%;
@@ -8,18 +9,21 @@
 }
 .App-header {
   width: 100%;
-  height: 120px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: whitesmoke;
   text-shadow: 1px 1px 1px black;
+  text-transform: uppercase;
+  text-align: center;
 }
-#input_field {
+input {
+  border-color: transparent;
   width: 150px;
   height: 25px;
   margin-right: 10px;
@@ -44,6 +48,13 @@ h1 {
 
 .error {
   border: 2px solid rgb(159, 5, 5);
+  transition: border ease-in-out .3s;
+}
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 1px black;
 }
 
 .color__container {
@@ -66,8 +77,9 @@ h1 {
 }
 .color span{
   margin: 10px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
+  font-family: 'Lora', serif;
 }
 .percent_value {
   letter-spacing: 1px;
@@ -90,10 +102,14 @@ h1 {
   background-color: rgba(255, 255, 255, 0.174);
 }
 
-.copied {
+.color .copied {
   position: absolute;
-  bottom: 10%;
-  font-size: 8px;
+  bottom: 20%;
+  font-size: 1rem;
+  background: rgba(128, 128, 128, 0.436);
+  color: white;
+  border: 1px solid black;
+  padding: 2px;
 }
 
 

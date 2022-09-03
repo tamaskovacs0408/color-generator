@@ -25,9 +25,8 @@ function App() {
       <div className="App-header">
         <h1>Tint and Shade Generator</h1>
         <div className="form__container">
-          <form onSubmit={handleSubmit}>
+          <form className="color_form" onSubmit={handleSubmit}>
             <input
-              id="input_field"
               type="text"
               value={color}
               onChange={(event) => setColor(event.target.value)}
@@ -36,6 +35,7 @@ function App() {
             />
             <input className="btn" type="submit" value="Submit" />
           </form>
+          <h2>Click on the HEX code to copy</h2>
         </div>
       </div>
       <div className="color__container">
