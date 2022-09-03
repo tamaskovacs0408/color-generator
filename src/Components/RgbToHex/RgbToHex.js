@@ -4,6 +4,8 @@ function compToHex(comp) {
   return hex.length === 1 ? '0' + hex : hex;
 };
 
-function rgbToHex(r, g, b) {
+function RgbToHex(r, g, b) {
   return '#' + compToHex(r) + compToHex(g) + compToHex(b);
 }
+
+export default RgbToHex;
