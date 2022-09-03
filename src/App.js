@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Values from "values.js";
+import Color from "./Components/Color/Color";
 
 function App() {
   const [color, setColor] = useState("");
@@ -10,7 +11,8 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     try {
-      let colors = new Values(color).all(10);
+      let colors = new Values(color).all(20);
+      setColorList(colors)
     } catch (error) {
       setError(true)
       console.log(error)
@@ -32,7 +34,9 @@ function App() {
           <input type="submit" value="Submit" />
         </form>
       </div>
-      <div className="color__container"></div>
+      <div className="color__container">
+
+      </div>
     </div>
   );
 }
