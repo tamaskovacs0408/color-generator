@@ -36,8 +36,9 @@ input {
   border-radius: 5px;
   background-color: dodgerblue;
   color: white;
-  font-size: 1.5rem;
-  width: 60px;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 80px;
   height: 30px;
   cursor: pointer;
   transition: background-color ease-out 0.3s;
